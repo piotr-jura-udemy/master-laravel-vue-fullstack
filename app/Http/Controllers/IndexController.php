@@ -18,6 +18,6 @@ class IndexController extends Controller
 
     public function show()
     {
-        return inertia('Index/Index');
+        return inertia('Index/Show');
     }
 }
