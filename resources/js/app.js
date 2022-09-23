@@ -11,6 +11,8 @@ createInertiaApp({
 
     return page
   },
+  // function () {}
+  // {el: xxx, App: xxx, props: xxx}
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .use(plugin)
