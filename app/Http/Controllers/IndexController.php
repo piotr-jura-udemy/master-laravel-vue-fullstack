@@ -14,6 +14,7 @@ class IndexController extends Controller
         // then visit http://127.0.0.1:8000 (or whatever php artisan serve suggests)
         // to see the output
         // dd(Listing::all());
+        // dd(Listing::where('beds', '>=', 4)->orderBy('price', 'asc')->first());
         return inertia(
             'Index/Index',
             [
