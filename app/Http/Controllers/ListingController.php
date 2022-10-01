@@ -102,14 +102,12 @@ class ListingController extends Controller
             ->with('success', 'Listing was changed!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+
+    public function destroy(Listing $listing)
     {
-        //
+        $listing->delete();
+
+        return redirect()->back()
+            ->with('success', 'Listing was deleted!');
     }
 }
