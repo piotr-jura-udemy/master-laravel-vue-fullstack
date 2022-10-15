@@ -50,13 +50,22 @@
         >
           Create Account
         </button>
+
+        <div class="mt-2 text-center">
+          <Link
+            :href="route('login')"
+            class="text-sm text-gray-500"
+          >
+            Already have an account? Click here
+          </Link>
+        </div>
       </div>
     </div>
   </form>
 </template>
 
 <script setup>
-import { useForm } from '@inertiajs/inertia-vue3'
+import { useForm, Link } from '@inertiajs/inertia-vue3'
 
 const form = useForm({
   name: null,
