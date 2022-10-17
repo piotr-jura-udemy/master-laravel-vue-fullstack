@@ -14,7 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::table('listings', function (Blueprint $table) {
-            $table->foreignIdFor(\App\Models\User::class, 'by_user_id');
+            $table->foreignIdFor(
+                \App\Models\User::class,
+                'by_user_id'
+            )->constrained('users');
         });
     }
 
@@ -26,7 +29,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('listings', function (Blueprint $table) {
-            $table->dropForeignIdFor(\App\Models\User::class, 'by_user_id');
+            //
         });
     }
 };
