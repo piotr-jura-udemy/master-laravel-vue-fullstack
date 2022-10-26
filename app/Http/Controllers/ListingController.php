@@ -24,11 +24,12 @@ class ListingController extends Controller
             'priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo'
         ]);
 
+
         return inertia(
             'Listing/Index',
             [
                 'filters' => $filters,
-                'listings' => Listing::orderByDesc('created_at')
+                'listings' => Listing::mostRecent()
                     ->when(
                         $filters['priceFrom'] ?? false,
                         fn ($query, $value) => $query->where('price', '>=', $value)
