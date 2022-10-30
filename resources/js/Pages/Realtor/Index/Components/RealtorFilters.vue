@@ -58,11 +58,13 @@ const sortLabels = {
 }
 
 const sortOptions = computed(() => sortLabels[filterForm.by])
-
+const props = defineProps({
+  filters: Object,
+})
 const filterForm = reactive({
-  deleted: false,
-  by: 'created_at',
-  order: 'desc',
+  deleted: props.filters.deleted ?? false,
+  by: props.filters.by ?? 'created_at',
+  order: props.filters.order ?? 'desc',
 })
 watch(
   filterForm, debounce(() => Inertia.get(
