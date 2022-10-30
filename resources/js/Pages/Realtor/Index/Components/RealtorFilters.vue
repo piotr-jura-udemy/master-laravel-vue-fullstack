@@ -4,6 +4,7 @@
       <div class="flex flex-nowrap items-center gap-2">
         <input
           id="deleted"
+          v-model="filterForm.deleted"
           type="checkbox" 
           class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
         />
@@ -12,3 +13,20 @@
     </div>
   </form>
 </template>
+
+<script setup>
+import { reactive, watch } from 'vue'
+import { Inertia } from '@inertiajs/inertia'
+
+const filterForm = reactive({
+  deleted: false,
+})
+// reactive / ref / computed
+watch(
+  filterForm, () => Inertia.get(
+    route('realtor.listing.index'),
+    filterForm,
+    {preserveState: true, preserveScroll: true},
+  ),
+)
+</script>
