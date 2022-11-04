@@ -29,8 +29,15 @@
 import { computed } from 'vue'
 import Box from '@/Components/UI/Box.vue'
 import { useForm } from '@inertiajs/inertia-vue3'
+import { Inertia } from '@inertiajs/inertia'
+import NProgress from 'nprogress'
 
 const props = defineProps({ listing: Object })
+Inertia.on('progress', (event) => {
+  if (event.detail.progress.percentage) {
+    NProgress.set((event.detail.progress.percentage / 100) * 0.9)
+  }
+})
 
 const form = useForm({
   images: [],
