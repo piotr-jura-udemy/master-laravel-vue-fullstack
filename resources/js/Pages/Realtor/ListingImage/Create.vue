@@ -21,6 +21,11 @@
           Reset
         </button>
       </section>
+      <div v-if="imageErrors.length" class="input-error">
+        <div v-for="(error, index) in imageErrors" :key="index">
+          {{ error }}
+        </div>
+      </div>
     </form>
   </Box>
 
@@ -62,6 +67,7 @@ Inertia.on('progress', (event) => {
 const form = useForm({
   images: [],
 })
+const imageErrors = computed(() => Object.values(form.errors))
 const canUpload = computed(() => form.images.length)
 const upload = () => {
   form.post(
