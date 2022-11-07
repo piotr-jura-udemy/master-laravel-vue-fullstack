@@ -9,8 +9,14 @@ use Illuminate\Support\Facades\Storage;
 
 class RealtorListingImageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('can:update,listing');
+    }
+
     public function create(Listing $listing)
     {
+        // $this->authorize('update', $listing);
         $listing->load(['images']);
         return inertia(
             'Realtor/ListingImage/Create',
