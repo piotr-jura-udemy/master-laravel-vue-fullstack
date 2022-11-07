@@ -51,14 +51,22 @@
             </Link>
           </div>
 
-          <div class="mt-2">
+          <div class="mt-2 flex gap-1">
             <Link 
               :href="route('realtor.listing.image.create', { listing: listing.id })" 
               class="block w-full btn-outline text-xs font-medium text-center"
             >
-              Images ({{ listing.images_count }})
+              🌆 <Badge>{{ listing.images_count }}</Badge>
+            </Link>
+            <Link
+              :href="route('realtor.listing.show', { listing: listing.id })"
+              class="block w-full btn-outline text-xs font-medium text-center"
+            >
+              💶 <Badge>{{ listing.offers_count }}</Badge>
             </Link>
           </div>
+
+          <!-- <div class="mt-2" /> -->
         </section>
       </div>
     </Box>
@@ -73,6 +81,7 @@
 import ListingAddress from '@/Components/ListingAddress.vue'
 import ListingSpace from '@/Components/ListingSpace.vue'
 import Price from '@/Components/Price.vue'
+import Badge from '@/Components/UI/Badge.vue'
 import Box from '@/Components/UI/Box.vue'
 import Pagination from '@/Components/UI/Pagination.vue'
 import RealtorFilters from '@/Pages/Realtor/Index/Components/RealtorFilters.vue'

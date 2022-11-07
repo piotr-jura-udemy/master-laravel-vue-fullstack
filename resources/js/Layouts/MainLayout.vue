@@ -9,7 +9,7 @@
           <Link :href="route('listing.index')">LaraZillow</Link>
         </div>
         <div v-if="user" class="flex items-center gap-4">
-          <Link class="text-sm text-gray-500" :href="route('realtor.listing.index')">{{ user.name }}</Link>
+          <Link class="text-sm text-gray-500" :href="route('realtor.listing.index')">Realtor</Link>
           <Link :href="route('realtor.listing.create')" class="btn-primary">+ New Listing</Link>
           <div>
             <Link :href="route('logout')" method="delete" as="button">Logout</Link>
