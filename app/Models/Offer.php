@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Auth;
+use Exception;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -32,5 +33,10 @@ class Offer extends Model
     public function scopeExcept(Builder $query, Offer $offer): Builder
     {
         return $query->where('id', '!=', $offer->id);
+    }
+
+    public function scopeNotByMe(Builder $query): Builder
+    {
+        return $query->where('bidder_id', '!=', Auth::user()?->id);
     }
 }

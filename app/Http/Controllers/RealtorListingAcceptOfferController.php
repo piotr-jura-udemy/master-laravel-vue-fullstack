@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Offer;
 use Illuminate\Http\Request;
+use App\Notifications\OfferAccepted;
+use App\Notifications\OfferRejected;
 
 class RealtorListingAcceptOfferController extends Controller
 {
@@ -30,13 +32,21 @@ class RealtorListingAcceptOfferController extends Controller
         //     ]);
 
         // Notify users about rejection
-        // $offer->for
-        //     ->offers
-        //     ->filter(fn (Offer $o) => $o->id !== $offer->id)
-        //     ->each(fn (Offer $o) => $o->by->notify(new OfferRejected($o)));
-
+        $offer->listing
+            ->offers()
+            ->notByMe()
+            ->with('bidder')
+            ->get()
+            ->each(
+                fn (Offer $offer) => $offer->bidder->notify(new OfferRejected($offer))
+            );
         // Notify the bidder his offer was accepted
-        // $offer->by->notify(new OfferAccepted($offer));
+        $offer->bidder->notify(new OfferAccepted($offer));
+
+        // $offer->for
+        // ->offers
+        // ->filter(fn (Offer $o) => $o->id !== $offer->id)
+        // ->each(fn (Offer $o) => $o->by->notify(new OfferRejected($o)));
 
         return redirect()->back()->with(
             'success',
