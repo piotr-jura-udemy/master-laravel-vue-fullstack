@@ -1,17 +1,18 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\UserAccountController;
 use App\Http\Controllers\ListingOfferController;
 use App\Http\Controllers\NotificationController;
-use App\Http\Controllers\NotificationSeenController;
-use App\Http\Controllers\RealtorListingAcceptOfferController;
 use App\Http\Controllers\RealtorListingController;
-use App\Http\Controllers\RealtorListingImageController;
-use App\Http\Controllers\UserAccountController;
+use App\Http\Controllers\NotificationSeenController;
 use Illuminate\Notifications\Events\NotificationSent;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RealtorListingImageController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use App\Http\Controllers\RealtorListingAcceptOfferController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +56,13 @@ Route::get('/email/verify', function () {
   return inertia('Auth/VerifyEmail');
 })
   ->middleware('auth')->name('verification.notice');
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+  $request->fulfill();
+
+  return redirect()->route('listing.index')
+    ->with('success', 'Email was verified!');
+})->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::resource('user-account', UserAccountController::class)
   ->only(['create', 'store']);
