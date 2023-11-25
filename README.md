@@ -1,64 +1,49 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<a href="https://www.udemy.com/user/piotr-jura">
+  <p align="center"><img alt="Piotr Jura - Udemy Instructor" src="https://avatars.githubusercontent.com/u/39863283?v=4" align="center" width="200"></p>
+  <h1 align="center">Piotr Jura Udemy Courses</h1>
+  <h2 align="center">Fado Code Camp</h2>
+</a>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  High-quality, comprehensive courses for web developers.
 </p>
 
-## About Laravel
+<p align="center">
+  <a href="#about-the-instructor"><strong>About the Instructor</strong></a> ·
+  <a href="#courses"><strong>Courses</strong></a> ·
+  <a href="#contact-and-links"><strong>Contact & Links</strong></a> ·
+  <a href="#course-resources"><strong>This Course Resources</strong></a>
+</p>
+<br/>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## About the Instructor
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+I am Piotr Jura, a seasoned web developer and a passionate Udemy instructor. With years of experience in JavaScript, TypeScript, Node, PHP, MySQL, Vue, React, and more, I bring practical, real-world knowledge to my students.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Courses
 
-## Learning Laravel
+- [Master Nuxt 3 - Full-Stack Complete Guide](https://www.udemy.com/course/master-nuxt-full-stack-complete-guide/?referralCode=4EBA58BFBD39A31A9BE9)
+- [Symfony 6 Framework Hands-On 2023](https://www.udemy.com/course/symfony-framework-hands-on/?referralCode=6750F64C057515A5F787)
+- [Vue 3 Mastery: Firebase & More - Learn by Doing!](https://www.udemy.com/course/vuejs-course/?referralCode=26DAD96DAB47B4602DA3)
+- [Master NestJS - Node.js Framework 2023](https://www.udemy.com/course/master-nestjs-the-javascript-nodejs-framework/?referralCode=C8A3F83982053A5E44C0)
+- [Master Laravel with GraphQL, Vue.js, and Tailwind](https://www.udemy.com/course/master-laravel-with-graphql-vuejs-and-tailwind/?referralCode=CE3B5297B3614EFA884A)
+- [Master Laravel, Vue 3 & Inertia Full Stack 2023](https://www.udemy.com/course/master-laravel-6-with-vuejs-fullstack-development/?referralCode=4A6CED7AA1583CB709D6)
+- [Master Laravel 10 for Beginners & Intermediate 2023](https://www.udemy.com/course/laravel-beginner-fundamentals/?referralCode=E86A873AC47FB438D79C)
+- [Symfony API Platform with React Full Stack Masterclass](https://www.udemy.com/course/symfony-api-platform-reactjs-full-stack-masterclass/?referralCode=D2C29D1C641BB0CDBCD4)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Contact and Links
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Blog:** [Fado Code Camp](https://fadocodecamp.com/)
+- **LinkedIn:** [Follow Me on LinkedIn](https://www.linkedin.com/in/piotr-j-24250b257/)
+- **GitHub:** You are here! Give me a follow!
+- **Twitter:** [@piotr_jura](https://twitter.com/piotr_jura)
 
-## Laravel Sponsors
+## Course Resources
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Coming up!
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p align="center">
+  <strong>Explore, Learn, and Grow with My Comprehensive Web Development Courses!</strong>
+</p>
